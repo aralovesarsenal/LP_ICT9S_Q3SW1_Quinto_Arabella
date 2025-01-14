@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert Currency!!</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #ffe6f2;
+      color: #333;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .converter-container {
+      max-width: 450px;
+      margin: 5% auto;
+      text-align: center;
+      padding: 30px;
+      border-radius: 20px;
+      background-color: #ffecf7;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .currency-display {
+      font-size: 3rem;
+      font-weight: 600;
+      margin: 20px 0;
+      color: #ff69b4;
+    }
+
+    .btn-custom {
+      width: 140px;
+      margin: 10px;
+      background-color: #ff85c1;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 12px;
+    }
+
+    .btn-custom:hover {
+      background-color: #ff5e99;
+    }
+
+    h3 {
+      color: #ff69b4;
+      margin-bottom: 30px;
+    }
+
+    .design {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .design-img {
+      width: 80px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="converter-container">
+    <h3> ｡୨ৎ°‧Convert Peso Currency⭑.ᐟ</h3>
+
+    <div class="design">
+      <img src="https://media.discordapp.net/attachments/1278729923011285013/1328720800219402303/urJwFnAWcBY7cAi4gHLnJ3QGdBZwFnAUW0wIuICzmfXFn5SzgLOAscOQWcAHhyE3uDugs4CzgLLCYFnABYTHvizsrZwFnAWeBI7eACwhHbnJ3QGcBZwFngcW0gAsIi3lf3Fk5CzgLOAscuQVcQDhyk7sDOgs4CzgLLKYFXEBYzPvizspZwFnAWeDILeACwpGb3B3QWcBZwFlgMS3gAsJi3hd3Vs4CzgLOAkduARcQjtzk7oDOAs4CzgKLaQEXEBbzvrizchZwFnAWOHILuIBw5CZ3B3QWcBZwFlhMC7iAsJj3xZ2Vs4CzgLPAkVvABYQjN7k7oLOAs4CzwGJawAWExbwv7qycBZwFnAWO3AIuIBy5yd0BnQWcBZwFFtMCLiAs5n1xZUs4CzgLHDkFnAB4chN7g7oLOAs4CywmBZwAWEx74s7K2cBZwFngSO3gAsIR25yd0BnAWcBZ4HFtIALCIt5X9xZOQs4CzgLHLkFXEA4cpO7AzoLOAs4Cyym..png?ex=6787bb2d&is=678669ad&hm=fad13b27bafe650385130b93b786aae5a176b16f7db68640d69c4d4ee98273f8&=&format=webp&quality=lossless&width=606&height=606" alt="Left Money Image" class="design-img">
+      <img src="https://media.discordapp.net/attachments/1278729923011285013/1328721515436441650/nEHAIOATOKgKOEM7qyLjjcgg4BBwCp4yAI4RTBtx9nEPAIeAQOKsIOEI4qyPjjssh4BBwCJwyAo4QThlw93EOAYeAQCsIvAvdZVZa7KnxIAAAAASUVORK5CYII.png?ex=6787bbd7&is=67866a57&hm=badae2a4ebcf53243ff4c8c0f66bd55c427baef33cc6fe7f2f8815c66d56bcd8&=&format=webp&quality=lossless&width=546&height=546" alt="Right HK PiggyBank Image" class="design-img">
+    </div>
+
+    <div class="currency-display" id="currency-value">0.00</div>
+
+    <div>
+      <button class="btn btn-custom" onclick="convertCurrency('dollar')">Dollar 💵</button>
+      <button class="btn btn-custom" onclick="convertCurrency('baht')">Baht 💴</button>
+      <button class="btn btn-success btn-custom" onclick="refreshValue()">Refresh 🔄</button>
+    </div>
+  </div>
+
+  <script>
+    function convertCurrency(currency) {
+      let exchangeRates = {
+        dollar: 1.75,  // Example rate for 100 pesos
+        baht: 59.27   // Example rate for 100 pesos
+      };
+      document.getElementById('currency-value').innerText = exchangeRates[currency] || "0.00";
+    }
+
+    function refreshValue() {
+      document.getElementById('currency-value').innerText = "0.00";
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
